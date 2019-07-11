@@ -5,18 +5,16 @@
     android:orientation="vertical">
 
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/home_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        />
+        android:theme="?attr/actionBarTheme"/>
 
 
-
-    <android.support.design.widget.TabLayout
+    <com.google.android.material.tabs.TabLayout
         android:id="@+id/home_tablayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,32 +22,33 @@
         app:tabSelectedTextColor="@android:color/white"
         app:tabTextColor="@android:color/black">
 
-        <android.support.design.widget.TabItem
+        <com.google.android.material.tabs.TabItem
             android:id="@+id/dashboard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Dashboard" />
 
-        <android.support.design.widget.TabItem
+        <com.google.android.material.tabs.TabItem
             android:id="@+id/summary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Summary" />
 
-        <android.support.design.widget.TabItem
+        <com.google.android.material.tabs.TabItem
             android:id="@+id/graphs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Graphs" />
 
-        <android.support.design.widget.TabItem
+        <com.google.android.material.tabs.TabItem
             android:id="@+id/review"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Review" />
-    </android.support.design.widget.TabLayout>
 
-    <android.support.v4.view.ViewPager
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
         android:id="@+id/hme_viewpager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

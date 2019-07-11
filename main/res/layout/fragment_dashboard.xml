@@ -7,11 +7,12 @@
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
+        android:id="@+id/linear1_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:background="@android:color/black"
+        android:background="@color/colorPrimary"
         android:orientation="horizontal"
         android:padding="10dp">
 
@@ -19,11 +20,72 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Total Disposals "
+            android:text="Total Disposals : "
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/total_disposals_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/linear2_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@android:color/holo_green_dark"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Disposals Running : "
+
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/disposals_running"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear3_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear2_id"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Total TubeWells : "
             android:textColor="@android:color/white"
             android:textSize="15dp" />
 
         <TextView
+            android:id="@+id/total_tubewells_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1"
@@ -33,12 +95,14 @@
 
     <LinearLayout
 
+        android:id="@+id/linear4_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/linear2_id"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:background="@android:color/holo_orange_dark"
+        android:background="@android:color/holo_green_dark"
         android:orientation="horizontal"
         android:padding="10dp">
 
@@ -46,135 +110,61 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Disposals Running "
+            android:text="Tubewells Running : "
+            android:textColor="@android:color/white"
             android:textSize="15sp" />
 
         <TextView
-
+            android:id="@+id/tubewells_running_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2"
+            android:textColor="@android:color/white"
             android:textSize="15sp" />
 
 
-    </LinearLayout>
-
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:background="@android:color/black"
-        android:orientation="horizontal"
-        android:padding="10dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Total Disposals "
-            android:textColor="@android:color/white"
-            android:textSize="15dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1"
-            android:textColor="@android:color/white"
-            android:textSize="15dp" />
     </LinearLayout>
 
     <LinearLayout
-
-        android:layout_width="wrap_content"
+        android:id="@+id/linear5_id"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:background="@android:color/holo_orange_dark"
-        android:orientation="horizontal"
-        android:padding="10dp">
+        android:layout_below="@id/linear3_id"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <!--android:weightSum="3">-->
 
-        <TextView
+        <CheckBox
+            android:id="@+id/disposals_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Disposals Running "
-            android:textSize="15sp" />
+            android:text="Disposals" />
 
-        <TextView
+        <!--android:layout_weight="1"-->
 
+        <CheckBox
+            android:id="@+id/tubewell_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2"
-            android:textSize="15sp" />
+            android:text="Tubewells" />
+
+        <CheckBox
+            android:id="@+id/shaukatkhanam_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DisposalsShaukatKhanam" />
 
 
     </LinearLayout>
 
-    <!--</LinearLayout>-->
 
-
-    <!--<LinearLayout-->
-
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:gravity="center"-->
-    <!--android:orientation="horizontal"-->
-    <!--android:weightSum="4">-->
-
-    <!--<LinearLayout-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:background="@android:color/black"-->
-
-    <!--android:orientation="horizontal"-->
-    <!--android:padding="10dp"-->
-    <!--android:weightSum="2">-->
-
-    <!--<TextView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_weight="1"-->
-    <!--android:text="Total Disposals "-->
-    <!--android:textColor="@android:color/white"-->
-    <!--android:textSize="15dp" />-->
-
-    <!--<TextView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="1"-->
-    <!--android:textColor="@android:color/white"-->
-    <!--android:textSize="15dp" />-->
-    <!--</LinearLayout>-->
-
-    <!--<LinearLayout-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:background="@android:color/holo_orange_dark"-->
-    <!--android:orientation="horizontal"-->
-    <!--android:padding="10dp"-->
-    <!--android:weightSum="2">-->
-
-    <!--<TextView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_weight="1"-->
-    <!--android:text="Disposals Running "-->
-    <!--android:textSize="15sp" />-->
-
-    <!--<TextView-->
-
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="2"-->
-    <!--android:textSize="15sp" />-->
-
-
-    <!--</LinearLayout>-->
-    <!--</LinearLayout>-->
+    <FrameLayout
+        android:id="@+id/child_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear5_id"
+        android:layout_marginTop="30dp" />
 
 
 </RelativeLayout>
