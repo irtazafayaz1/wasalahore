@@ -11,9 +11,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.maps.android.clustering.ClusterManager;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -66,21 +72,33 @@ public class DashboardFragment extends Fragment implements OnMapReadyCallback {
 
     }
 
-//    @Override
-//    public void onViewCreated(View view, Bundle savedInstanceState) {
-//        insertNestedFragment();
-//    }
-//
-//    // Embeds the child fragment dynamically
-//    private void insertNestedFragment() {
-//        Fragment childFragment = new MapFragmentClass();
-//        FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
-//        transaction.replace(R.id.child_fragment_container, childFragment).commit();
-//    }
-
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
+        ClusterManager clusterManager = new ClusterManager(getActivity(), googleMap);  // 3
+        googleMap.setOnCameraIdleListener(clusterManager);
+        List<Locations> items = getItems();
+        clusterManager.addItems(items);  // 4
+        clusterManager.cluster();  // 5
+
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(items.get(1).getPosition(), 15));
+
+
 
     }
+
+    private List<Locations> getItems() {
+        List<Locations> lists = new ArrayList<>();
+
+        LatLng latLng = new LatLng(31.512489, 74.283905);
+        LatLng latLng1 = new LatLng(31.475331, 74.344539);
+        LatLng latLng2 = new LatLng(31.475331, 74.344539);
+        lists.add(new Locations("Location1", latLng));
+        lists.add(new Locations("Location1", latLng1));
+        lists.add(new Locations("Location1", latLng2));
+
+        return lists;
+
+    }
+
 }

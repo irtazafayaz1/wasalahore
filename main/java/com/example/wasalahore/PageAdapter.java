@@ -1,6 +1,7 @@
 package com.example.wasalahore;
 
 import android.content.Context;
+import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -8,10 +9,12 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 public class PageAdapter extends FragmentPagerAdapter {
     private int noOfTabs;
+    Context context;
 
-    public PageAdapter(FragmentManager fragmentManager, int i) {
+    public PageAdapter(FragmentManager fragmentManager, int i, Context context) {
         super(fragmentManager);
         noOfTabs = i;
+        this.context = context;
     }
 
     @Override

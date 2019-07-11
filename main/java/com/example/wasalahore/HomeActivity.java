@@ -43,7 +43,7 @@ public class HomeActivity extends AppCompatActivity {
         tabGraphs = findViewById(R.id.graphs);
         tabReview = findViewById(R.id.review);
 
-        pageAdapter = new PageAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
+        pageAdapter = new PageAdapter(getSupportFragmentManager(), tabLayout.getTabCount(),context);
         viewPager.setAdapter(pageAdapter);
 
 
