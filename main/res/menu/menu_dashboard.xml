@@ -5,6 +5,11 @@
     <item
         android:id="@+id/item_dashboaard"
         android:title="Logout"
-        app:showAsAction="never"
-        />
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/back_home"
+        android:title="Home"
+        app:showAsAction="never" />
+
 </menu>

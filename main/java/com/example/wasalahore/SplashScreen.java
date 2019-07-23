@@ -20,7 +20,7 @@ public class SplashScreen extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
 
         imglogo = findViewById(R.id.splash_logo);
-        Picasso.get().load(R.drawable.wasalogo).into(imglogo);
+        Picasso.get().load(R.drawable.wasa_logo).into(imglogo);
 
         new Handler().postDelayed(new Runnable() {
             @Override

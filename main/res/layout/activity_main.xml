@@ -12,9 +12,9 @@
     <ImageView
         android:id="@+id/login_img"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:layout_centerHorizontal="true"
-        tools:src="@drawable/wasalogo"
+        tools:src="@drawable/wasa_logo"
 
         />
 
@@ -70,17 +70,17 @@
 
         <EditText
 
-            android:drawablePadding="15dp"
-            android:paddingStart="10dp"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="20dp"
-            android:drawableLeft="@drawable/ic_password"
             android:background="@drawable/edit_text_background"
+            android:drawableLeft="@drawable/ic_password"
+            android:drawablePadding="15dp"
             android:hint="Enter Password here"
             android:inputType="textPassword"
+            android:paddingStart="10dp"
             android:textColorHint="@color/colorPrimary"
             android:textSize="20sp" />
 
@@ -99,6 +99,8 @@
         android:text="Login"
         android:textColor="@android:color/white"
         android:textSize="20sp" />
+
+
 
 
 </RelativeLayout>
