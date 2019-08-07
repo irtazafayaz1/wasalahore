@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "716042938473",
+    "firebase_url": "https://wasalahore-afe58.firebaseio.com",
+    "project_id": "wasalahore-afe58",
+    "storage_bucket": "wasalahore-afe58.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:716042938473:android:627a3085be23ba74",
+        "android_client_info": {
+          "package_name": "com.example.wasalahore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "716042938473-ia6m5pv16vjbb4urjb6695o0f59ttuul.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.wasalahore",
+            "certificate_hash": "edb7b9b4afa965c5e51d69a8c37fa418033bd6d2"
+          }
+        },
+        {
+          "client_id": "716042938473-hthhgpjp42r395pnsc69iv06entovjqc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTtsifolp90dqwVTDelkW2fvJJ-D58oNw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "716042938473-hthhgpjp42r395pnsc69iv06entovjqc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

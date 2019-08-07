@@ -1,16 +1,16 @@
 package com.example.wasalahore.Ponding;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-import androidx.viewpager.widget.ViewPager;
-
 import android.os.Build;
 import android.os.Bundle;
-import androidx.appcompat.widget.Toolbar;
 
 import com.example.wasalahore.R;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.viewpager.widget.ViewPager;
 
 public class PondingHomeActivity extends AppCompatActivity {
 
@@ -32,14 +32,14 @@ public class PondingHomeActivity extends AppCompatActivity {
 
 
         toolbar = findViewById(R.id.ponding_toolbar);
-        toolbar.setTitle(getResources().getString(R.string.app_name));
+        toolbar.setTitle("Ponding Home Activity");
         setSupportActionBar(toolbar);
 
 
         tabLayout = findViewById(R.id.ponding_tab_layout);
         viewPager = findViewById(R.id.ponding_viewpager);
         tabDashboard = findViewById(R.id.ponding_dashboard);
-        tabReport = findViewById(R.id.ponding_report);
+        tabReport = findViewById(R.id.ponding_reports);
         tabSummary = findViewById(R.id.ponding_summary);
         tabGraph = findViewById(R.id.ponding_graph);
 

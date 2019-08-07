@@ -1,5 +1,4 @@
-package com.example.wasalahore.RainGauges;
-
+package com.example.wasalahore.DisposalsForTubeWells;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -29,18 +28,18 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-/**
- * A simple {@link Fragment} subclass.
- */
-public class DashboardRainFragment extends Fragment implements OnMapReadyCallback {
+public class DashboardWellsFragment extends Fragment implements OnMapReadyCallback {
+
     SupportMapFragment mapFragment;
 
-    public DashboardRainFragment() {
+    // TODO: Rename parameter arguments, choose names that matc
+    public DashboardWellsFragment() {
         // Required empty public constructor
     }
 
     @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+    public void onCreateOptionsMenu(Menu menu,
+                                    MenuInflater inflater) {
         inflater.inflate(R.menu.menu_dashboard, menu);
     }
 
@@ -49,13 +48,13 @@ public class DashboardRainFragment extends Fragment implements OnMapReadyCallbac
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         setHasOptionsMenu(true);
-        View v = inflater.inflate(R.layout.fragment_dashboard_rain, container, false);
-        mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map_fragment_ponding);
+        View v = inflater.inflate(R.layout.fragment_dashboard_wells, container, false);
+        mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map_fragment_wells);
         if (mapFragment == null) {
             FragmentManager fm = getFragmentManager();
             FragmentTransaction ft = fm.beginTransaction();
             mapFragment = SupportMapFragment.newInstance();
-            ft.replace(R.id.map_fragment_rain, mapFragment).commit();
+            ft.replace(R.id.map_fragment_wells, mapFragment).commit();
         }
         mapFragment.getMapAsync(this);
 
@@ -97,4 +96,6 @@ public class DashboardRainFragment extends Fragment implements OnMapReadyCallbac
         lists.add(new Locations("Location1", latLng2));
         return lists;
     }
+
+
 }
