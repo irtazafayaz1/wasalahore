@@ -1,8 +1,13 @@
-package com.example.wasalahore.RainGauges;
+package com.example.wasalahore.DisposalsForPumps;
 
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -25,22 +30,19 @@ import com.google.maps.android.clustering.ClusterManager;
 import java.util.ArrayList;
 import java.util.List;
 
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
 /**
  * A simple {@link Fragment} subclass.
  */
-public class DashboardRainFragment extends Fragment implements OnMapReadyCallback {
-    SupportMapFragment mapFragment;
+public class DashboardPumpsFragment extends Fragment implements OnMapReadyCallback {
 
-    public DashboardRainFragment() {
+    SupportMapFragment mapFragment;
+    public DashboardPumpsFragment() {
         // Required empty public constructor
     }
 
     @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+    public void onCreateOptionsMenu(Menu menu,
+                                    MenuInflater inflater) {
         inflater.inflate(R.menu.menu_dashboard, menu);
     }
 
@@ -49,13 +51,13 @@ public class DashboardRainFragment extends Fragment implements OnMapReadyCallbac
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         setHasOptionsMenu(true);
-        View v = inflater.inflate(R.layout.fragment_dashboard_rain, container, false);
-        mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map_fragment_ponding);
+        View v = inflater.inflate(R.layout.fragment_dashboard_pumps, container, false);
+        mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map_fragment_pumps);
         if (mapFragment == null) {
             FragmentManager fm = getFragmentManager();
             FragmentTransaction ft = fm.beginTransaction();
             mapFragment = SupportMapFragment.newInstance();
-            ft.replace(R.id.map_fragment_rain, mapFragment).commit();
+            ft.replace(R.id.map_fragment_pumps, mapFragment).commit();
         }
         mapFragment.getMapAsync(this);
 
@@ -97,4 +99,6 @@ public class DashboardRainFragment extends Fragment implements OnMapReadyCallbac
         lists.add(new Locations("Location1", latLng2));
         return lists;
     }
+
+
 }

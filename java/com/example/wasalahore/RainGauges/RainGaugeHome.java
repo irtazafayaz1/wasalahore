@@ -32,7 +32,7 @@ public class RainGaugeHome extends AppCompatActivity {
 
 
         toolbar = findViewById(R.id.rain_toolbar);
-        toolbar.setTitle(getResources().getString(R.string.app_name));
+        toolbar.setTitle("Rain Gauges");
         setSupportActionBar(toolbar);
 
 

@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.wasalahore.DisposalsForPumps.PumpsHomeActivity;
+import com.example.wasalahore.DisposalsForTubeWells.WellsHomeActivity;
 import com.example.wasalahore.Ponding.PondingHomeActivity;
 import com.example.wasalahore.RainGauges.RainGaugeHome;
 
@@ -12,7 +14,7 @@ import androidx.cardview.widget.CardView;
 
 public class ListActivity extends AppCompatActivity {
 
-    CardView ponding_points, rain_gauges, tubewells, disposals, drainage, others;
+    CardView ponding_points, rain_gauges, tubewells, pumps, drainage, others;
 
 
     @Override
@@ -22,11 +24,10 @@ public class ListActivity extends AppCompatActivity {
 
         ponding_points = findViewById(R.id.ponding_points);
         rain_gauges = findViewById(R.id.rain_gauges);
-        tubewells = findViewById(R.id.tubewells);
-        disposals = findViewById(R.id.disposals_station);
+        tubewells = findViewById(R.id.disposals_station);
+        pumps = findViewById(R.id.pump_station);
         drainage = findViewById(R.id.drainage);
         others = findViewById(R.id.others);
-
 
         others.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,10 +43,10 @@ public class ListActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        disposals.setOnClickListener(new View.OnClickListener() {
+        pumps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ListActivity.this, HomeActivity.class);
+                Intent intent = new Intent(ListActivity.this, PumpsHomeActivity.class);
                 startActivity(intent);
             }
         });
@@ -53,7 +54,7 @@ public class ListActivity extends AppCompatActivity {
         tubewells.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ListActivity.this, HomeActivity.class);
+                Intent intent = new Intent(ListActivity.this, WellsHomeActivity.class);
                 startActivity(intent);
             }
         });
